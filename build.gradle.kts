@@ -1,8 +1,9 @@
 import org.jetbrains.compose.compose
 
 plugins {
-  kotlin("multiplatform") version "1.6.10"
-  id("org.jetbrains.compose") version "1.0.1"
+  kotlin("multiplatform") version "2.1.0"
+  alias(libs.plugins.jetbrainsCompose)
+  alias(libs.plugins.compose.compiler)
 }
 
 group = "com.rocketraman.testkt50958"
@@ -25,9 +26,6 @@ kotlin {
     browser {
       runTask {
         sourceMaps = false
-      }
-      commonWebpackConfig {
-        cssSupport.enabled = true
       }
     }
   }

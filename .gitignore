@@ -42,6 +42,9 @@
 *.ear
 
 
+## Kotlin
+.kotlin/
+
 ### Gradle template
 .gradle
 build/
